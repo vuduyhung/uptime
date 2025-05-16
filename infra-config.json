@@ -1,0 +1,22 @@
+{
+    "$schema": "https://encore.dev/schemas/infra.schema.json",
+    "sql_servers": [
+        {
+            "host": "my-db-host:5432",
+            "databases": {
+                "monitor": {
+                    "username": "my-db-owner",
+                    "password": {
+                        "$env": "DB_PASSWORD"
+                    }
+                },
+                "site": {
+                    "username": "my-db-owner",
+                    "password": {
+                        "$env": "DB_PASSWORD"
+                    }
+                }
+            }
+        }
+    ]
+}
